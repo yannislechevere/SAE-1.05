@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+	    	<meta charset="utf-8">
+	    	<title>JO 2024 Paris | Accueil</title>
+            <meta name="author" content="Clément DELAGE">
+            <meta name="description" content="Site sur la page d'acceil des JO">
+	    	<meta name="keywords" content="judo, Jo, jeux Olympiques, Paris, 2024, Teddy Riner, médailles, règles du judo, épreuves Du Judo Au JO, classement des médailles, moments fort de Paris 2024, origine du judo, judo aux jeux Olympiques, Jeux olympiques, JO Paris, 2024, Teddy Riner, Judo, judoka, sport, sportif, tokyo, Rio de janeiro, ceinture noire, +100Kg, france, francais">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	</head>
+	<body id="codeAcceuil">
+        <header>  
+            <div>
+                <nav>
+                    <ul>
+                    <li>
+                        <a href="index.html">Accueil</a>
+                        <ul>
+                        <li><a href="#ouverture">Cérémonie d'ouverture</a></li>
+                        <li><a href="#Parcours">Parcours de la flamme olympique</a></li>
+                        <li><a href="#porteurs">Porteurs de la flamme olympique</a></li>
+                        <li><a href="#tableau">Tableau des médailles</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="sportif.html">Page sportif</a>
+                    </li>
+                    <li>
+                        <a href="discipline.html">L'histoire du Judo</a>
+                    </li>
+                    <li>
+                        <a href="epreuve.html">Judo +100kg</a>
+                    </li>
+                    </ul>
+                </nav>
+                <img src="images/logoJoParisBlanc.png" alt="logo des jo de paris">
+                <label>
+                    <input type="checkbox" id="toggle-background">
+                    <span></span>
+                </label>
+            </div>
+        </header>
+    <main>
+
+        <section>
+            <h1>Jeux Olympiques Paris 2024</h1>
+            <img src="images/seine_olympique.png" alt="Vue de Paris et la cérémonie" class="large-image">
+            <figure>
+                <img src="images/sport_jeux_olympiques_1.png" alt="Catégories des Jeux Olympiques">
+                <figcaption>Explorez la liste des 14 catégories emblématiques des Jeux Olympiques et paralympiques, ainsi que les nouvelles disciplines...</figcaption>
+            </figure>
+            <figure>
+                <img src="images/illustration_sports.png" alt="Carte des sites Olympiques">
+                <figcaption>Consultez la carte des principaux sites des compétitions...</figcaption>
+            </figure>
+            <figure>
+                <img src="images/beach_volley.png" alt="Lieux emblématiques">
+                <figcaption>Découvrez les lieux emblématiques où se dérouleront les épreuves des JO de Paris 2024...</figcaption>
+            </figure>
+        </section>
+        <section id="ouverture">
+                <h2>Cérémonie D'ouverture</h2>
+                    <div class="carousel" id="carousel-1">
+                        <div class="carousel-images">
+                            <img src="images/cérémonie_ouverture_jo.png" alt="Cérémonie d'ouverture">
+                            <img src="images/zidane.png" alt="Image 2">
+                            <img src="images/ceremonie_ouverture2.png" alt="Image 3">
+                        </div>
+                        <div class="carousel-buttons">
+                            <button onclick="prevSlide('carousel-1')">&#8249;</button>
+                            <button onclick="nextSlide('carousel-1')">&#8250;</button>
+                        </div>
+                    </div>
+        </section>
+        
+        <section id="Parcours">
+            <h2>Parcours de la flamme olympique</h2>
+            <img src="images/parcours_flamme_olympique.png" alt="">
+        </section>
+        <section id="porteurs">
+            <div class="container">
+                <h2>Portraits des principaux porteurs de la flamme</h2>
+                <div class="card">
+                    <img src="images/zidane.png" alt="Zinedine Zidane">
+                    <p><a href="https://fr.wikipedia.org/wiki/Zinedine_Zidane" target="_blank"><strong>Zinedine Zidane</strong></a> - Ex-footballeur</p>
+                </div>
+                <div class="card">
+                    <img src="images/flamme_florent_manaudou.jpg" alt="Florent Manaudou">
+                    <p><a href="https://fr.wikipedia.org/wiki/Florent_Manaudou" target="_blank"><strong>Florent Manaudou</strong></a> - Nageur Olympique</p>
+                </div>
+                <div class="card">
+                    <img src="images/teddy_riner.png" alt="Teddy Riner">
+                    <p><a href="https://fr.wikipedia.org/wiki/Teddy_Riner" target="_blank"><strong>Teddy Riner</strong></a> - Judoka Olympique</p>
+                </div>
+            </div>
+        </section>    
+        <section id="tableau">
+            <h2>Tableau des médailles</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Pays</th>
+                            <th>Or</th>
+                            <th>Argent</th>
+                            <th>Bronze</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>États-Unis</td>
+                        <td>40</td>
+                        <td>44</td>
+                        <td>42</td>
+                        <td>126</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Chine</td>
+                        <td>40</td>
+                        <td>27</td>
+                        <td>24</td>
+                        <td>91</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Japon</td>
+                        <td>20</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Australie</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>16</td>
+                        <td>53</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>France</td>
+                        <td>16</td>
+                        <td>26</td>
+                        <td>22</td>
+                        <td>64</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Pays-Bas</td>
+                        <td>15</td>
+                        <td>7</td>
+                        <td>12</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Grande-Bretagne</td>
+                        <td>14</td>
+                        <td>22</td>
+                        <td>29</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Corée du Sud</td>
+                        <td>13</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Italie</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>15</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Allemagne</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>8</td>
+                        <td>33</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Cérémonie de Cloture</h2>
+                <div class="carousel" id="carousel-2">
+                    <div class="carousel-images">
+                        <img src="images/ceremonie_cloture.png" alt="cérémonie de Cloture1">
+                        <img src="images/cloture2.png" alt="cérémonie de Cloture2">
+                        <img src="images/cloture3.png" alt="cérémonie de Cloture3">
+                    </div>
+                    <div class="carousel-buttons">
+                        <button onclick="prevSlide('carousel-2')">&#8249;</button>
+                        <button onclick="nextSlide('carousel-2')">&#8250;</button>
+                    </div>
+                </div>
+                <script>
+                    const carousels = {};
+        
+                    function updateCarousel(carouselId) {
+                        const carousel = carousels[carouselId];
+                        const images = carousel.images;
+                        const offset = -carousel.currentIndex * 100;
+                        images.style.transform = `translateX(${offset}%)`;
+                    }
+        
+                    function nextSlide(carouselId) {
+                        const carousel = carousels[carouselId];
+                        carousel.currentIndex = (carousel.currentIndex + 1) % carousel.totalImages;
+                        updateCarousel(carouselId);
+                    }
+        
+                    function prevSlide(carouselId) {
+                        const carousel = carousels[carouselId];
+                        carousel.currentIndex = (carousel.currentIndex - 1 + carousel.totalImages) % carousel.totalImages;
+                        updateCarousel(carouselId);
+                    }
+        
+                    document.querySelectorAll('.carousel').forEach((carousel) => {
+                        const carouselId = carousel.id;
+                        const images = carousel.querySelector('.carousel-images');
+                        const totalImages = images.children.length;
+        
+                        carousels[carouselId] = {
+                            images: images,
+                            totalImages: totalImages,
+                            currentIndex: 0
+                        };
+                    });
+                </script>
+        </section>
+        <section id="Parcours2">
+            <h2>Lien du site des Jeux Paralympiques</h2>
+            <a href="https://fr.wikipedia.org/wiki/Jeux_paralympiques_d%27%C3%A9t%C3%A9_de_2024" target="_blank">
+            <img src="images/logo-JO-paralympique-removebg-preview.png" height="25%" width="25%"  alt="Jeux Paralympiques">
+            </a>
+            <h2>Liste des sponsors</h2>
+            <img src="images/listeSponsors.png" alt="Liste des sponsors officiels" title="liste des sponsors">
+        </section>
+        </main>
+        <footer>
+            <aside>
+                <img src="images/logoJoParisBlanc.png" alt = "logo JO Blanc" title="logo JO Blanc">
+                <nav>
+                    <h3><strong>Jeux olympiques</strong></h3>
+                    <ul>
+                        <li>Calendrier & Résultats</li>
+                        <li><a href="index.html/#tableau">Tableau des médailles</a></li>
+                        <li><a href="discipline.html">Sports</a></li>
+                        <li>Sites</li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h3><strong>Célébrer les jeux</strong></h3>
+                    <ul>
+                        <li>Célébrer les Jeux</li>
+                        <li>Parc des Champions</li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h3><strong>Relais de la flamme</strong></h3>
+                    <ul>
+                        <li><a href="index.html/#Parcours">Aperçu</a></li>
+                        <li><a href="index.html/#Parcours">Parcours</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <hr>
+            <div>
+                <a href="https://www.instagram.com/jeuxolympiques/">
+                    <img src="images/logoInstaNoir.png" alt="Instagram" title="logo Instagram">
+                </a>
+                <a href="https://x.com/jeuxolympiques?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    <img src="images/logoXNoir.png" alt="X (Twitter)" title="logo twitter">
+                </a>
+                <a href="https://www.facebook.com/Paris2024/?locale=fr_FR">
+                    <img src="images/logoFacebookNoir.png" alt="Facebook" title="logo Facebook">
+                </a>
+                <a href="https://www.youtube.com/channel/UCg4W1uf-i5X1nVaeWJsKuyA">
+                    <img src="images/logoYoutubeNoir.png" alt="YouTube" title="logo YouTube">
+                </a>
+                <a href="https://www.tiktok.com/@jeuxolympiques?lang=fr">
+                    <img src="images/logoTiktokNoir.png" alt="TikTok" title="logo TikTok">
+                </a>
+                <a href="https://fr.linkedin.com/company/paris-2024-olympic-and-paralympic-games-bid">
+                    <img src="images/logoLinkedinNoir.png" alt="Linkedin" title="logo Linkedin">
+                </a>
+                
+            </div>
+            <hr>
+            <p>
+                <a href="mailto:arthur.chauvel@etudiant.univ-rennes.fr">Chauvel Arthur</a> - 
+                <a href="mailto:clement.delage@etudiant.univ-rennes.fr">Delage Clément</a> - 
+                <a href="mailto:yannis.lechevere@etudiant.univ-rennes.fr">Le Chevère Yannis</a> - 
+                <a href="mailto:marceau.lesech@etudiant.univ-rennes.fr">Le Sech Marceau</a>
+            </p>
+        </footer>
+	</body>
+</html>

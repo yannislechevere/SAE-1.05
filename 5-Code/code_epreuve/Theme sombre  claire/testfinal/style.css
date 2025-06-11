@@ -1,0 +1,2304 @@
+/********************************************
+Caractéristiques globales de toutes les pages
+********************************************/
+/* Styles par défaut (Desktop 1440x1024) */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Pour les écrans de téléphone (428x926) */
+@media screen and (max-width: 768px) {
+    #codeSportif body {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #codeSportif section {
+        flex-direction: column;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #codeSportif main>section:nth-child(3) table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    footer aside {
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    footer div>a {
+        margin: 5px;
+        align-items: center;
+    }
+
+    #codeSportif main>section:nth-child(2)  article,
+    #codeSportif main>section:nth-child(2)  aside{
+        width: 100% !important;
+        padding: auto !important;
+        margin: auto !important;
+        align-items: center;
+        align-self: middle;
+    }
+
+    #codeSportif main section:last-child aside:first-of-type,
+    #codeSportif main section:last-child aside:last-child{
+        width: 100% !important;
+        padding: auto !important;
+        margin: auto !important;
+        align-items: center;
+        align-self: middle;
+    }
+}
+/*********************************************
+Caractéristiques du footer de toutes les pages
+*********************************************/
+footer {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+footer aside {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 14px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+footer aside>img {
+    width: 150px;
+    height: auto;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+footer aside a {
+    width: 200px;
+    height: 200px;
+}
+
+footer nav h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+footer div>a {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+footer div {
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer>p, footer>div {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/********************************************
+Caractéristiques du header de la page sportif
+********************************************/
+
+#codeSportif body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#codeSportif header div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 38%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    height: 15%;
+}
+
+#codeSportif header div nav {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    max-width: 100%;
+    min-width: 0;
+    height: 100%;
+}
+
+#codeSportif header div img {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+}
+
+#codesportif header>img{
+    width: auto;
+    margin: 0px;
+    padding: 0%;
+}
+
+/*fond qui apparait*/
+#codeSportif main nav {
+    position: fixed;
+    top: -20em;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #3E405C, #8386C2);
+    color: white;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: top 0.3s ease;
+    height: 10%;
+    z-index: 3;
+}
+
+#codeSportif nav.visible {
+    top: 0;
+}
+
+#codeSportif label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+#codeSportif label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#codeSportif span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+#codeSportif span:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+#codeSportif input:checked + span {
+    background-color: black;
+}
+
+#codeSportif input:focus + span {
+    box-shadow: 0 0 1px black;
+}
+
+#codeSportif input:checked + span:before {
+    transform: translateX(26px);
+}
+
+#codeSportif span {
+    border-radius: 34px;
+}
+
+#codeSportif span:before {
+    border-radius: 50%;
+}
+
+/*menu deroulant*/
+#codeSportif header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+#codeSportif header nav ul li {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+#codeSportif header nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+}
+
+#codeSportif header nav ul li a:hover {
+    background-color: #C0C0C0;
+    border-radius: 10px;
+}
+
+#codeSportif header nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #C0C0C0;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#codeSportif header nav ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+#codeSportif header nav ul li ul li a:hover {
+    background-color: white;
+}
+
+#codeSportif header nav ul li:hover ul {
+    display: block;
+}
+
+#codeSportif header:first-child>img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#codeSportif label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+#codeSportif label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#codeSportif span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+#codeSportif span:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+#codeSportif input:checked + span {
+    background-color: black;
+}
+
+#codeSportif input:focus + span {
+    box-shadow: 0 0 1px black;
+}
+
+#codeSportif input:checked + span:before {
+    transform: translateX(26px);
+}
+
+#codeSportif span {
+    border-radius: 34px;
+}
+
+#codeSportif span:before {
+    border-radius: 50%;
+}
+
+
+/*******************************************************
+Caractéristiques des sections du main de la page sportif
+*******************************************************/
+#codeSportif main {
+    background-color: white;
+}
+
+#codeSportif section{
+    width: 100%;
+    background-color: #e3d2c1;
+    color: black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*********************************************
+Caractéristiques des vidéos de la page sportif
+*********************************************/
+#codeSportif video {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 400px;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+}
+
+#codeSportif main>section:nth-of-type(4) li{
+    padding-bottom: 15px;
+}
+
+/*************************************************************************
+Caractéristiques de la section performances de carrière de la page sportif
+*************************************************************************/
+#codeSportif main aside {
+    width: 100%;
+    background-color: #e3d2c1;
+    color: black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#codeSportif main aside aside {
+    background-color: #4b4747;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #e3d2c1 inset;
+    width: 70%;
+    margin-right: 0px;
+}
+
+#codeSportif main aside div article {
+    width: 30%;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#codeSportif main>aside div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#codeSportif main aside h2, main aside h3 {
+    margin: 20px 0;
+    color: black;
+    font-weight: bold;
+}
+
+#codeSportif main aside aside h3 {
+    color: white;
+    margin: 20px 0;
+    text-align: left;
+    width: 100%;
+}
+
+#codeSportif main aside h2 {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+#codeSportif main aside article ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+#codeSportif main aside article ul li {
+    margin: 10px 0;
+}
+/*****************************************************************************
+Caractéristiques de la section actualités + réseaux sociaux de la page sportif
+*****************************************************************************/
+#codeSportif main section:last-child aside a {
+    display: inline-block;
+    width: 25%;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+
+#codeSportif main section:last-child h2{
+    text-align: center;
+    width: 100%;
+}
+
+#codeSportif main section:last-child img {
+    width: 100px;
+    height: auto;
+    padding: 20px;
+}
+
+#codeSportif main section:last-child img:hover{
+    transform: scale(1.5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#codeSportif main section:last-child aside:last-child a:last-child{
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+#codeSportif main section:last-child{
+    overflow: auto;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+#codeSportif main>section:last-child>h2 {
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+}
+
+#codeSportif main section:last-child aside:first-of-type{
+    background-color: #e3d2c1;
+    width: 45%;
+    float: left;
+    margin-left: 0px;
+}
+
+#codeSportif main section:last-child aside:last-child {
+    float: right;
+    width: 45%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: row;
+    background-color: #e3d2c1;
+}
+
+/****************************************************************************
+Caractéristiques de la section biographie + fiche identité de la page sportif
+****************************************************************************/
+#codeSportif main>section:nth-child(2) {
+    overflow: auto;
+    width: auto;
+    background-color: white;
+}
+
+#codeSportif main>section:nth-child(2) h2 {
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+}
+
+#codeSportif main>section:nth-child(2)  article {
+    float: left;
+    width: 45%;
+    height: auto;
+    background-color: #e3d2c1;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 100px 10px;
+}
+
+#codeSportif main>section:nth-child(2)  aside {
+    float: right;
+    width: 45%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0px;
+    padding: 0px;
+    top: 0%;
+}
+
+#codeSportif main>section:nth-child(2)  article h2 {
+    text-align: middle;
+    margin-top: 20px;
+}
+
+#codeSportif main>section:nth-child(2)  aside img {
+    height: 50%;
+    width: 100%;
+    top: 0%;
+}
+
+#codeSportif main>section:nth-child(2)  aside li {
+    margin: 10px;
+}
+
+/*********************************************************
+Caractéristiques de la section palmarès de la page sportif
+*********************************************************/
+#codeSportif main>section:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#codeSportif main>section:nth-child(3) h2{
+    width: 100%;
+    text-align: center;
+}
+
+#codeSportif main>section:nth-child(3) table {
+    border-spacing: 1em;
+    padding-right: 3em;
+    width: 50%;
+    padding-left: 1em;
+}
+
+#codeSportif main>section:nth-child(3) thead{
+    text-align: center;
+    font-weight: bold;
+}
+
+#codeSportif main>section:nth-child(3) th{
+    text-align: left;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#codeSportif main>section:nth-child(3) td{
+    margin-top: 20px;
+    text-align: center;
+} 
+
+#codeSportif main>section:nth-child(3) tbody tr td:first-of-type{
+    background-color: #d3c481;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+}
+
+#codeSportif main>section:nth-child(3) tbody tr td:nth-of-type(2){
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+}
+
+#codeSportif main>section:nth-child(3) tbody tr td:nth-of-type(3){
+    background-color: #cd7f32;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+}
+
+#codeSportif main>section:nth-child(3) img {
+    width: 30%;
+    height: auto;
+    margin: 0em;
+    padding-right: 0em;
+}
+
+/*********************************************************************************************************************************/
+/******************/
+/*     header     */
+/******************/
+
+#codeDiscipline header div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 38%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    height: 15%;
+}
+
+#codeDiscipline header div nav {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    max-width: 100%;
+    min-width: 0;
+    height: 100%;
+}
+#codeDiscipline header div img {
+    grid-column: 2;
+    grid-row: 1;
+    width: 75%;
+
+  
+}
+#codeDiscipline header div button{
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 50%;
+}
+
+
+/*fond qui apparait*/
+#codeDiscipline main nav {
+    position: fixed;
+    top: -20em;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #3E405C, #8386C2);
+    color: white;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: top 0.3s ease;
+    height: 10%;
+    z-index: 3;
+}
+
+#codeDiscipline nav.visible {
+    top: 0;
+}
+
+#codeDiscipline label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+#codeDiscipline label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#codeDiscipline span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+#codeDiscipline span:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+#codeDiscipline input:checked + span {
+    background-color: black;
+}
+
+#codeDiscipline input:focus + span {
+    box-shadow: 0 0 1px black;
+}
+
+#codeDiscipline input:checked + span:before {
+    transform: translateX(26px);
+}
+
+#codeDiscipline span {
+    border-radius: 34px;
+}
+
+#codeDiscipline span:before {
+    border-radius: 50%;
+}
+<<<<<<< Updated upstream
+
+#codeDiscipline span:before {
+    border-radius: 50%;
+}
+=======
+>>>>>>> Stashed changes
+
+
+
+#codeDiscipline header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+#codeDiscipline header nav ul li {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+#codeDiscipline header nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+}
+
+#codeDiscipline header nav ul li a:hover {
+    background-color: #C0C0C0;
+    border-radius: 10px;
+}
+
+#codeDiscipline header nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #C0C0C0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#codeDiscipline header nav ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+#codeDiscipline header nav ul li ul li a:hover {
+    background-color: white;
+}
+
+#codeDiscipline header nav ul li:hover ul {
+    display: block;
+}
+
+#codeDiscipline header:first-child>img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/************************************************************/
+/*     Discipline - Globale                                 */
+/************************************************************/
+
+
+#codeDiscipline section {
+    position: relative;
+    background-color: #E3D2C1;
+    border-radius: 10px;
+    margin: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-top: 2%;
+}
+
+#codeDiscipline h1 {
+    font-family: "Cormorant", serif;
+    font-size: 42px;
+    text-align: center;
+
+}
+
+#codeDiscipline h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#codeDiscipline section article {
+    border-radius: 10px;
+    border-color: linear-gradient(to right, #3E405C, #8386C2) ;
+}
+
+
+
+/*logo judo jo*/
+#codeDiscipline section:nth-child(2)>img,
+#codeDiscipline section:nth-child(3)>img, 
+#codeDiscipline section:nth-child(4)>img, 
+#codeDiscipline section:nth-child(5)>img, 
+#codeDiscipline section:nth-child(6)>img, 
+#codeDiscipline section:nth-child(7)>img{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    
+}
+
+
+
+/************************************************************/
+/*     Discipline - Téléphones (max-width: 767px)           */
+/************************************************************/
+
+@media screen and (max-width: 767px) {
+    #codeDiscpline body {
+        font-size: 14px;
+        padding: 0;
+    }
+    #codeDiscpline h1 {
+        font-size: 24px !important;
+    }
+
+    #codeDiscpline h2 {
+        font-size: 10px !important;
+    }
+    
+    /** Partie 1 et 2 **/
+    #codeDiscipline section>article {
+        grid-template-columns: 1fr !important;
+        gap: 5px !important;
+    }
+    #codeDiscipline section>article:nth-child(2)>img, 
+    #codeDiscipline section>article:first-child>img {
+        display: none !important;
+    }
+
+    /** Partie 4 **/
+    #codeDiscipline section:nth-child(5) article {
+        border-radius: 5px !important;
+    }
+    #codeDiscipline section:nth-child(5) div>article:last-child, 
+    #codeDiscipline section:nth-child(5) div>article:first-child, 
+    #codeDiscipline section:nth-child(5) div>article:nth-child(2) {
+        grid-template-columns: 1fr !important; 
+        gap: 5px !important;
+    }
+    #codeDiscipline section:nth-child(5) div article:first-child>img, 
+    #codeDiscipline section:nth-child(5) div article:nth-child(2)>img, 
+    #codeDiscipline section:nth-child(5) div article>img {
+        display: none !important;
+    }
+
+    /** Partie 5 **/
+   #codeDiscipline table thead {
+       border: 2px solid #E3D2C1 !important;
+   }
+   #codeDiscipline tbody tr:last-child td {
+       border-bottom: none !important;
+   }
+   #codeDiscipline section:nth-child(6)>div {
+       border-radius: 5px !important;
+   }
+   #codeDiscipline td {
+       border-bottom: 2px solid #E3D2C1 !important;
+   }
+   #codeDiscipline th:last-child {
+       width: 3em !important;
+   }
+   #codeDiscipline th:nth-child(2)>div,
+   #codeDiscipline th:nth-child(3)>div,
+   #codeDiscipline th:nth-child(4)>div {
+       width: 2.5em !important;
+       height: 2.5em !important; 
+   }
+   #codeDiscipline th:nth-child(5) {
+       height: 5em !important;
+   }
+   #codeDiscipline th:nth-child(5) div {
+       width: 1.5em !important;
+       height: 1.5em !important;
+   }
+   #codeDiscipline th:nth-child(5)>div:first-child {
+       transform: translateX(-0.5em) translateY(0.5em) !important;
+   }
+   #codeDiscipline th:nth-child(5)>div:nth-child(2) {
+       transform: translateX(0.5em) translateY(0.5em) !important;
+   }
+   #codeDiscipline th:nth-child(5)>div:last-child {
+       transform: translateY(-0.5em) !important;
+   }
+   #codeDiscipline td:nth-child(3)>div,
+   #codeDiscipline td:nth-child(4)>div,
+   #codeDiscipline td:nth-child(5)>div {
+       width: 2em !important;
+       height: 2em !important; 
+   }
+   #codeDiscipline section:nth-child(6) table img {
+       display: none !important;
+   }
+
+
+    /** Partie 6 **/
+    #codeDiscipline section:nth-child(7) div>div:first-child, 
+    #codeDiscipline section:nth-child(7) div>div:nth-child(2), 
+    #codeDiscipline section:nth-child(7) div>div:last-child {
+        grid-template-columns: 1fr !important;
+        gap: 5px !important;
+    }
+    #codeDiscipline section:nth-child(7) div div>iframe, 
+    #codeDiscipline section:nth-child(7) div div:last-child>img, 
+    #codeDiscipline section:nth-child(7) div div:nth-child(2)>img {
+        grid-column: 1!important;
+        grid-row: 1!important;
+        border-radius: 5px !important;
+    }
+    #codeDiscipline section:nth-child(7) div div>p, 
+    #codeDiscipline section:nth-child(7) div div>p, 
+    #codeDiscipline section:nth-child(7) div div:nth-child(2)>p{
+        grid-column: 1!important;
+        grid-row: 2!important;
+    }        
+}
+
+
+/************************************************************/
+/*     Discipline - Partie 1 : origine judo               */
+/************************************************************/
+
+#codeDiscipline section:nth-child(2)>div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    place-items: center;
+    margin-top: 5%;
+
+}
+#codeDiscipline section:nth-child(2) div img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+#codeDiscipline section:nth-child(2) div>div {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    text-align: justify;
+}
+
+/************************************************************/
+/*     Discipline - Partie 2 : Le Judo aux Jeux Olympiques  */
+/************************************************************/
+
+#codeDiscipline section:nth-child(3)>div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    place-items: center;
+    margin-top: 5%;
+}
+#codeDiscipline section:nth-child(3) div img {
+    grid-column: 3;
+    grid-row: 1;    
+    width: 100%;
+    border-radius: 10px;
+}
+#codeDiscipline section:nth-child(3) div div {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    text-align: justify;
+}
+
+/************************************************************/
+/*     Discipline - Partie 3 : règle du judo                */
+/************************************************************/
+
+#codeDiscipline section:nth-child(4) div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#codeDiscipline section:nth-child(4) article { 
+    position: relative;
+    z-index: 1;
+}
+#codeDiscipline section:nth-child(4) article::before { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    padding: 5px;
+    background: linear-gradient(to right, #3E405C, #8386C2);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0) border-box;
+    mask-composite: exclude;
+}
+#codeDiscipline section:nth-child(4) div>article:last-child {
+    grid-column: 1 / -1;
+}
+#codeDiscipline section:nth-child(4) article:first-child, 
+#codeDiscipline section:nth-child(4) article:nth-child(2), 
+#codeDiscipline section:nth-child(4) article:nth-child(3), 
+#codeDiscipline section:nth-child(4) article:nth-child(4), 
+#codeDiscipline section:nth-child(4) article:nth-child(5) {
+    padding: 1em;
+    text-align: justify;
+}
+
+/************************************************************/
+/*     Discipline - Partie 4 : epreuve/catégorie            */
+/************************************************************/
+
+#codeDiscipline section:nth-child(5) article {
+    position: relative;
+    z-index: 1;
+}
+#codeDiscipline section:nth-child(5) article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    padding: 5px;
+    background: linear-gradient(to bottom, #3E405C, #8386C2);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0) border-box;
+    mask-composite: exclude;
+}
+#codeDiscipline section:nth-child(5)>div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+#codeDiscipline section:nth-child(5) div>article:last-child, 
+#codeDiscipline section:nth-child(5) div>article:first-child, 
+#codeDiscipline section:nth-child(5) div>article:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10%;
+    place-items: center;
+}
+#codeDiscipline section:nth-child(5) div article:first-child>img, 
+#codeDiscipline section:nth-child(5) div article:nth-child(2)>img {
+    width: 100%;
+    border-radius: 10px;
+}
+#codeDiscipline section:nth-child(5) div>article:last-child {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    text-align: justify;
+}
+#codeDiscipline section:nth-child(5) div article>h2 {
+    grid-column: 1;
+    grid-row: 1;
+}
+#codeDiscipline section:nth-child(5) div article>ul, 
+#codeDiscipline section:nth-child(5) div article>p {
+    grid-column: 1;
+    grid-row: 2;
+}
+#codeDiscipline section:nth-child(5) div article>img {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+#codeDiscipline section:nth-child(5) h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+/************************************************************/
+/*     Discipline - Partie 5 : tableau des medaill          */
+/************************************************************/
+
+#codeDiscipline table {
+    border-radius: 10px;
+    padding: 2%;
+    border-collapse: collapse;
+}
+#codeDiscipline table thead {
+    background: linear-gradient(to top right, #8386C2, #3E405C);
+    border: 3px solid #E3D2C1;
+}
+#codeDiscipline section:nth-child(6)>div {
+    background: linear-gradient(to top right, #3E405C, #8386C2);
+    padding: 5%;
+    border-radius: 10px;
+}
+#codeDiscipline td {
+    border-bottom: 3px solid #E3D2C1;
+    border-left: none;
+    border-right: none; 
+}
+#codeDiscipline th:nth-child(1)>div,
+#codeDiscipline th:nth-child(2)>div, 
+#codeDiscipline th:nth-child(3)>div, 
+#codeDiscipline th:nth-child(4)>div,
+#codeDiscipline th:nth-child(5)>div {
+    margin: auto; 
+}
+#codeDiscipline tbody tr:last-child td {
+    border-bottom: none;
+}
+#codeDiscipline th:last-child {
+    width: 8em;
+}
+#codeDiscipline th {
+    width: 25%;
+}
+#codeDiscipline th:nth-child(2)>div, 
+#codeDiscipline th:nth-child(3)>div, 
+#codeDiscipline th:nth-child(4)>div, 
+#codeDiscipline td:nth-child(3)>div, 
+#codeDiscipline td:nth-child(4)>div, 
+#codeDiscipline td:nth-child(5)>div {
+    border-radius: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.688em;
+    height: 4.688em;  
+}
+#codeDiscipline th:nth-child(2)>div {
+    background-color: #D3C481; 
+}
+#codeDiscipline th:nth-child(3)>div {
+    background-color: #D9D9D9;
+}
+#codeDiscipline th:nth-child(4)>div {
+    background-color: #CD7F32;
+}
+#codeDiscipline th:nth-child(5) {
+    position: relative;
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#codeDiscipline th:nth-child(5) div {
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+#codeDiscipline th:nth-child(5)>div:first-child {
+    background: #D3C481;
+    transform: translateX(-0.938em) translateY(0.938em);
+}
+#codeDiscipline th:nth-child(5)>div:nth-child(2) {
+    background: #C0C0C0;
+    transform: translateX(0.938em) translateY(0.936em);
+}
+#codeDiscipline th:nth-child(5)>div:last-child {
+    background: #CD7F32;
+    transform: translateY(-0.938em);
+}
+#codeDiscipline td:nth-child(3)>div, 
+#codeDiscipline td:nth-child(4)>div, 
+#codeDiscipline td:nth-child(5)>div {
+    width: 3em;
+    height: 3em;  
+}
+#codeDiscipline td:nth-child(3)>div {
+    background-color: #D3C481; 
+}
+#codeDiscipline td:nth-child(4)>div {
+    background-color: #D9D9D9;
+}
+#codeDiscipline td:nth-child(5)>div {
+    background-color: #CD7F32;
+}
+#codeDiscipline td {
+    text-align: center;
+}
+#codeDiscipline th:first-child, 
+#codeDiscipline td:nth-child(2), 
+#codeDiscipline td:nth-child(6){
+    color: white;
+}
+#codeDiscipline section:nth-child(6) table img {
+    border-radius: 10px;
+}
+
+/************************************************************/
+/*     Discipline - Partie 6 : moment fort                  */
+/************************************************************/
+
+#codeDiscipline section:nth-child(7) div>div:first-child, 
+#codeDiscipline section:nth-child(7) div>div:nth-child(2), 
+#codeDiscipline section:nth-child(7) div>div:last-child {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    place-items: center;
+}
+#codeDiscipline section:nth-child(7) div div>iframe, 
+#codeDiscipline section:nth-child(7) div div:last-child>img {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+#codeDiscipline section:nth-child(7) div div>p, 
+#codeDiscipline section:nth-child(7) div div>p{
+    grid-column: 3;
+    grid-row: 1;
+    text-align: justify;
+}
+#codeDiscipline section:nth-child(7) div div:nth-child(2)>img {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+#codeDiscipline section:nth-child(7) div div:nth-child(2)>p {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: justify;
+}
+#codeDiscipline section:nth-child(7) div img, 
+#codeDiscipline section:nth-child(7) div iframe {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+/*********************************************************************************************************************************/
+
+/*********************************************************
+Epreuve
+*********************************************************/
+#codeEpreuve body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+#codeEpreuve header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#codeEpreuve header h1 {
+    background-image: url("images/fond_header.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 6em 0;
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 767px){
+    #codeEpreuve label {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    #codeEpreuve label input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    #codeEpreuve span {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+    }
+
+    #codeEpreuve span:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+    }
+
+    #codeEpreuve input:checked + span {
+        background-color: black;
+    }
+
+    #codeEpreuve input:focus + span {
+        box-shadow: 0 0 1px black;
+    }
+
+    #codeEpreuve input:checked + span:before {
+        transform: translateX(26px);
+    }
+
+    #codeEpreuve span {
+        border-radius: 34px;
+    }
+
+    #codeEpreuve span:before {
+        border-radius: 50%;
+    }
+
+    #codeEpreuve header div img {
+        display: none;
+    }
+
+    #codeEpreuve header input {
+        display: none;
+    }
+    
+    #codeEpreuve header label {
+        display: none; 
+    }
+    
+    #codeEpreuve header nav {
+        display: none; 
+    }
+    
+    #codeEpreuve header div img {
+        display: none; 
+    }
+    
+    #codeEpreuve header p {
+        display: none; 
+    }
+    
+    #codeEpreuve header ul:nth-of-type(1) {
+        display: none; 
+    }
+    
+    #codeEpreuve header ul:nth-of-type(2) {
+        display: none; 
+    }
+    
+    #codeEpreuve header ul:nth-of-type(1) li {
+        display: none; 
+    }
+    
+    #codeEpreuve header ul:nth-of-type(1) li a {
+        display: none; 
+    }
+}
+
+@media screen and (max-width: 767px)  { 
+    
+    #codeEpreuve header input {
+        display: none;
+    }
+
+    #codeEpreuve header label {
+        cursor: pointer;
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 2000;
+    }
+
+    #codeEpreuve header label span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin: 5px auto;
+        background-color: black;
+        transition: all 0.3s;
+    }
+
+    #codeEpreuve header nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 25%;
+        background-color: #E3D2C1;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: left 0.5s ease;
+        z-index: 1500;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 20px;
+    }
+
+    #codeEpreuve header div img {
+        width: 40px;
+        margin-left: 80%;
+    }
+
+    #codeEpreuve header p {
+        color: black;
+    }
+
+    #codeEpreuve header ul:nth-of-type(1) {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    #codeEpreuve header ul:nth-of-type(2) {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    #codeEpreuve header ul:nth-of-type(1) li {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    #codeEpreuve header ul:nth-of-type(1) li a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        transition: color 0.3s;
+    }
+
+    #codeEpreuve header ul:nth-of-type(1) li a:hover {
+        color: #007BFF;
+    }
+
+    #codeEpreuve header input:checked ~ nav {
+        left: 0;
+    }
+
+    #codeEpreuve header input:checked ~ label span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    #codeEpreuve header input:checked ~ label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #codeEpreuve header input:checked ~ label span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    #codeEpreuve header ul:nth-of-type(1) li {
+        animation: slide-in 0.5s ease both;
+    }
+
+    @keyframes slide-in {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+/* Main */
+#codeEpreuve main {
+    width: 90%;
+    margin: auto;
+}
+
+#codeEpreuve section {
+    background-color: #E3D2C1;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 20px;
+}
+
+#codeEpreuve article {
+    background-color: #E3D2C1;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5em;
+    margin: 20px;
+}
+
+#codeEpreuve img {
+    border-radius: 10px;
+}
+
+#codeEpreuve video {
+    width: 97%;
+    height: 100%;
+    margin: 20px;
+}
+
+#codeEpreuve aside {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#codeEpreuve table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#codeEpreuve table th, table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+#codeEpreuve table th {
+    background-color: #333;
+    color: white;
+}
+
+/* Styles pour les éléments de la grille */
+#codeEpreuve aside > div {
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+#codeEpreuve aside > div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #E3D2C1;
+}
+
+#codeEpreuve aside > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+@media screen and (max-width: 767px)  { 
+    #codeEpreuve aside {
+        grid-template-columns: 1fr; 
+    }
+    #codeEpreuve aside > div:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+#codeEpreuve aside > div:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 767px) {
+    #codeEpreuve aside > div:nth-child(2) img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+
+#codeEpreuve main > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+#codeEpreuve main > div:nth-of-type(2) img:first-of-type {
+    height: 100%;
+    width: 50%;
+}
+
+#codeEpreuve main > div:nth-of-type(2) img:last-of-type {
+    height: 50%;
+}
+
+#codeEpreuve main > div:nth-of-type(2) article {
+    height: 50%;
+}
+
+#codeEpreuve main > section:nth-of-type(4) {
+    background-color: white;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#codeEpreuve main > section:nth-of-type(4) img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+@media screen and (max-width: 767px) {
+    #codeEpreuve main > section:nth-of-type(4) img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+
+#codeEpreuve main > section:nth-of-type(4) > div {
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+#codeEpreuve main > section:nth-of-type(4) > div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+#codeEpreuve main > section:nth-of-type(4) > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #E3D2C1;
+}
+
+#codeEpreuve main > section:nth-of-type(4) > div:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+@media screen and (max-width: 767px)  { 
+    #codeEpreuve main > section:nth-of-type(4) {
+        grid-template-columns: 1fr; 
+    }
+
+    #codeEpreuve main > section:nth-of-type(4) > div:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    #codeEpreuve main > section:nth-of-type(4) > div:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: #E3D2C1;
+    }
+    
+    #codeEpreuve main > section:nth-of-type(4) > div:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*********************************************************
+Page Index
+*********************************************************/
+
+#codeAcceuil body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+#codeAcceuil h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-size: 24px;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+#codeAcceuil main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 2.5em;
+}
+
+#codeAcceuil .large-image {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+#codeAcceuil section{
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: #e3d2c1;
+    border-radius: 10px;
+    width: 100%;
+    margin: 20px;
+    padding: 2.5em;
+}
+
+#codeAcceuil section:first-of-type{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+#codeAcceuil section:first-of-type h1{
+    width: 100%;
+    text-align: center;
+}
+
+
+#codeAcceuil figure {
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+#codeAcceuil figure img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#codeAcceuil figcaption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#codeAcceuil .carousel {
+    position: relative;
+    max-width: 960px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+}
+#codeAcceuil .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+#codeAcceuil .carousel-images img {
+    max-width: 100%;
+    height: auto;
+}
+#codeAcceuil .caption {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+}
+#codeAcceuil .carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+#codeAcceuil .carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2em;
+}
+#codeAcceuil .carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#codeAcceuil .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#codeAcceuil .card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#codeAcceuil .card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#codeAcceuil .card p {
+    font-size: 18px;
+    margin: 0;
+    text-align: left;
+}
+
+#codeAcceuil footer {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#codeAcceuil footer aside {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 14px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+#codeAcceuil footer nav {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#codeAcceuil footer aside a {
+    width: 200px;
+    height: 200px;
+}
+
+#codeAcceuil footer nav h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#codeAcceuil nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#codeAcceuil footer nav ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#codeAcceuil footer div>a {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+#codeAcceuil footer div {
+    align-items: center;
+    justify-content: space-between;
+}
+
+#codeAcceuil footer>p, footer>div {
+    text-align: center;
+}
+
+#codeAcceuil footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#codeAcceuil table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f4f4f4;
+  }
+
+  @media (max-width: 1024px) {
+    #codeAcceuil section {
+        flex-direction: column;
+        padding: 1.5em;
+    }
+
+    #codeAcceuil footer aside {
+        flex-direction: column;
+    }
+
+    #codeAcceuil .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #codeAcceuil .card img {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #codeAcceuil main {
+        padding: 1rem;
+    }
+
+    #codeAcceuil .carousel {
+        max-width: 100%;
+    }
+
+    #codeAcceuil footer nav ul li {
+        font-size: 12px;
+    }
+
+    #codeAcceuil footer nav h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #codeAcceuil h1 {
+        font-size: 1.5rem;
+    }
+
+    #codeAcceuil .card p {
+        font-size: 16px;
+    }
+
+    #codeAcceuil footer nav ul li {
+        font-size: 10px;
+    }
+}
+<<<<<<< Updated upstream
+
+#codeAcceuil header div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 38%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    height: 15%;
+}
+
+#codeAcceuil header div nav {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    max-width: 100%;
+    min-width: 0;
+    height: 100%;
+}
+
+#codeAcceuil header div img {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+}
+
+#codeAcceuil header>img{
+    width: auto;
+    margin: 0px;
+    padding: 0%;
+}
+
+#codeSportif header div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 38%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    height: 15%;
+}
+
+#codeSportif header div nav {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    max-width: 100%;
+    min-width: 0;
+    height: 100%;
+}
+
+#codeSportif header div img {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+}
+
+#codesportif header>img{
+    width: auto;
+    margin: 0px;
+    padding: 0%;
+}
+
+
+
+
+
+=======
+
+
+
+>>>>>>> Stashed changes
+#codeEpreuve img {
+    border-radius: 10px;
+}
+
+#codeEpreuve video {
+    width: 97%;
+    height: 100%;
+    margin: 20px;
+}
+
+#codeEpreuve aside {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+/* Styles pour les éléments de la grille */
+#codeEpreuve aside > div {
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+#codeEpreuve aside > div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #E3D2C1;
+}
+
+#codeEpreuve aside > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+@media screen and (max-width: 767px)  { 
+    #codeEpreuve aside {
+        grid-template-columns: 1fr; 
+    }
+    #codeEpreuve aside > div:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+#codeEpreuve aside > div:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 767px) {
+    #codeEpreuve aside > div:nth-child(2) img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+
+#codeEpreuve main > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+#codeEpreuve main > div:nth-of-type(2) img:first-of-type {
+    height: 100%;
+    width: 50%;
+}
+
+#codeEpreuve main > div:nth-of-type(2) img:last-of-type {
+    height: 50%;
+}
+
+#codeEpreuve main > div:nth-of-type(2) article {
+    height: 50%;
+}
+
+#codeEpreuve main > section:nth-of-type(4) {
+    background-color: white;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#codeEpreuve main > section:nth-of-type(4) img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+@media screen and (max-width: 767px) {
+    #codeEpreuve main > section:nth-of-type(4) img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+
+#codeEpreuve main > section:nth-of-type(4) > div {
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+#codeEpreuve main > section:nth-of-type(4) > div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+#codeEpreuve main > section:nth-of-type(4) > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #E3D2C1;
+}
+
+#codeEpreuve main > section:nth-of-type(4) > div:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+@media screen and (max-width: 767px)  { 
+    #codeEpreuve main > section:nth-of-type(4) {
+        grid-template-columns: 1fr; 
+    }
+
+    #codeEpreuve main > section:nth-of-type(4) > div:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    #codeEpreuve main > section:nth-of-type(4) > div:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: #E3D2C1;
+    }
+    
+    #codeEpreuve main > section:nth-of-type(4) > div:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}

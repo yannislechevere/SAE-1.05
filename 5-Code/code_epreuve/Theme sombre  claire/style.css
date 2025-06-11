@@ -1,0 +1,1078 @@
+/********************************************
+Caractéristiques globales de toutes les pages
+********************************************/
+/* Styles par défaut (Desktop 1440x1024) */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Pour les écrans de téléphone (428x926) */
+@media screen and (max-width: 428px) {
+    body {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    #codeSportif section {
+        flex-direction: column;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #codeSportif main>section:nth-child(2) table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    footer aside {
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    footer div>a {
+        margin: 5px;
+    }
+
+    #codeSportif main>section:first-child{ /*Responsivité de la section biographie et carte identité*/
+        flex-wrap: wrap-reverse;
+    }
+
+    #codeSportif main section:last-child { /*Responsivité de la section actualités et réseaux sociaux*/
+        flex-wrap: wrap;
+    }
+}
+/*********************************************
+Caractéristiques du footer de toutes les pages
+*********************************************/
+footer {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+footer aside {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 14px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+footer aside a {
+    width: 200px;
+    height: 200px;
+}
+
+footer nav h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+footer div>a {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+footer div {
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer>p, footer>div {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/********************************************
+Caractéristiques du header de la page sportif
+********************************************/
+#codeSportif header {
+    background-image: url(images/imagesHeader.png);
+    background-image: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 660px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/*******************************************************
+Caractéristiques des sections du main de la page sportif
+*******************************************************/
+#codeSportif main {
+    background-color: white;
+}
+
+#codeSportif section{
+    width: 100%;
+    background-color: #e3d2c1;
+    color: black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*********************************************
+Caractéristiques des vidéos de la page sportif
+*********************************************/
+#codeSportif video {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 400px;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+}
+
+/*************************************************************************
+Caractéristiques de la section performances de carrière de la page sportif
+*************************************************************************/
+#codeSportif main aside {
+    width: 100%;
+    background-color: #e3d2c1;
+    color: black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#codeSportif main aside aside {
+    background-color: #4b4747;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #e3d2c1 inset;
+    width: 70%;
+    margin-right: 0px;
+}
+
+#codeSportif main aside div article {
+    width: 30%;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#codeSportif main>aside div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#codeSportif main aside h2, main aside h3 {
+    margin: 20px 0;
+    color: black;
+    font-weight: bold;
+}
+
+#codeSportif main aside aside h3 {
+    color: white;
+    margin: 20px 0;
+    text-align: left;
+    width: 100%;
+}
+
+#codeSportif main aside h2 {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+#codeSportif main aside article ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+#codeSportif main aside article ul li {
+    margin: 10px 0;
+}
+/*****************************************************************************
+Caractéristiques de la section actualités + réseaux sociaux de la page sportif
+*****************************************************************************/
+#codeSportif main section:last-child aside a {
+    display: inline-block;
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+
+#codeSportif main section:last-child h2{
+    text-align: center;
+    width: 100%;
+}
+
+#codeSportif main section:last-child aside:last-child {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+#codeSportif main section:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#codeSportif main section:last-child img {
+    width: 100px;
+    height: auto;
+    padding: 20px;
+}
+
+#codeSportif main section:last-child{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: white;
+    margin: 0px;
+}
+
+#codeSportif main section:last-child aside:last-child a:last-child{
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+/****************************************************************************
+Caractéristiques de la section biographie + fiche identité de la page sportif
+****************************************************************************/
+#codeSportif main>section:first-child{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: auto;
+}
+
+#codeSportif main>section:first-child article {
+    width: 45%;
+    background-color: #e3d2c1;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 20px 10px;
+}
+
+#codeSportif main>section:first-child aside {
+    width: 45%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0px;
+    padding: 10px;
+}
+
+#codeSportif main>section:first-child article h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#codeSportif main>section:first-child aside img {
+    height: 50%;
+    width: 100%;
+}
+
+#codeSportif main>section:first-child aside li {
+    margin: 10px;
+}
+
+/*********************************************************
+Caractéristiques de la section palmarès de la page sportif
+*********************************************************/
+#codeSportif main>section:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#codeSportif main>section:nth-child(2) h2{
+    width: 100%;
+    text-align: center;
+}
+
+#codeSportif main>section:nth-child(2) table {
+    border-spacing: 1em;
+    padding-right: 3em;
+    width: 50%;
+    padding-left: 1em;
+}
+
+#codeSportif main>section:nth-child(2) thead{
+    text-align: center;
+    font-weight: bold;
+}
+
+#codeSportif main>section:nth-child(2) th{
+    text-align: left;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#codeSportif main>section:nth-child(2) td{
+    margin-top: 20px;
+    text-align: center;
+} 
+
+#codeSportif main>section:nth-child(2) tbody tr td:first-of-type{
+    background-color: #d3c481;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+}
+
+#codeSportif main>section:nth-child(2) tbody tr td:nth-of-type(2){
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+}
+
+#codeSportif main>section:nth-child(2) tbody tr td:nth-of-type(3){
+    background-color: #cd7f32;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+}
+
+#codeSportif main>section:nth-child(2) img {
+    margin: 0em;
+    padding-right: 0em;
+}
+
+/*********************************************************************************************************************************/
+
+
+
+#codeDiscipline header:first-child img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#codeDiscipline section {
+    position: relative;
+    background-color: #E3D2C1;
+    border-radius: 10px;
+    margin: 1.25em;
+    padding-left: 8.125em;
+    padding-right: 8.125em;
+    padding-bottom: 2.25em;
+    padding-top: 3.125em;
+}
+
+#codeDiscipline main > div {
+    background: linear-gradient(to right, #3E405C, #8386C2);
+    display: flex;
+    position: sticky;
+    top: 0px;
+    margin: 0px;
+    height: 6em;
+    z-index: 3;
+}
+#codeDiscipline #elem {
+    background: linear-gradient(to right, #3E405C, #8386C2);
+    width: 30%;
+    border-radius: 100% 0% 0% 0%;
+    margin-left: 70%;
+    z-index: 4;
+}
+
+#codeDiscipline h1 {
+    font-family: "Cormorant", serif;
+    font-size: 42px;
+}
+
+#codeDiscipline h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#codeDiscipline section article {
+    border-radius: 10px;
+    border-color: linear-gradient(to right, #3E405C, #8386C2) ;
+}
+#codeDiscipline #menu {
+    border-radius: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 3em;
+    height: 3em;
+}
+#codeDiscipline #logo {
+    position: fixed;
+    top: 2%;
+    left: 45%;
+    width: 111px;
+    z-index: 5;
+}
+#codeDiscipline section h1 {
+    text-align: center;
+}
+
+#codeDiscipline section:nth-child(2)>img, #codeDiscipline section:nth-child(3)>img, #codeDiscipline section:nth-child(4)>img, #codeDiscipline section:nth-child(5)>img, #codeDiscipline section:nth-child(6)>img{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    
+}
+
+/*//////////////////////////////////*/
+/* Section 1/2 : origine judo       */
+/*//////////////////////////////////*/
+
+#codeDiscipline section>article{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    place-items: center;
+}
+
+#codeDiscipline section>article:first-child>img {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 10px;
+}
+
+#codeDiscipline section>article:first-child>div {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    text-align: justify;
+}
+
+#codeDiscipline section>article:nth-child(2)>div {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    text-align: justify;
+}
+
+#codeDiscipline section>article:nth-child(2)>img {
+    grid-column: 3;
+    grid-row: 1;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+
+/*//////////////////////////////////*/
+/* Section 3 : règle du judo        */
+/*//////////////////////////////////*/
+
+#codeDiscipline section:nth-child(3) div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#codeDiscipline section:nth-child(3) article { 
+    border: 5px solid ;
+    border-image: linear-gradient(#3E405C, #8386C2, black, white) 1;
+    border-radius: 10px;
+}
+#codeDiscipline section:nth-child(3) div>article:last-child {
+    grid-column: 1 / -1;
+}
+
+#codeDiscipline section:nth-child(3) article:first-child, #codeDiscipline section:nth-child(3) article:nth-child(2), #codeDiscipline section:nth-child(3) article:nth-child(3), #codeDiscipline section:nth-child(3) article:nth-child(4), #codeDiscipline section:nth-child(3) article:nth-child(5) {
+    padding: 1em;
+    text-align: justify;
+}
+
+
+
+
+/*//////////////////////////////////*/
+/* Section 4 : epreuve/catégorie    */
+/*//////////////////////////////////*/
+
+#codeDiscipline section:nth-child(4) article {
+    border: 5px solid ;
+    border-image: linear-gradient(#3E405C, #8386C2, black, white) 1;
+    border-radius: 10px;
+}
+
+#codeDiscipline section:nth-child(4)>div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#codeDiscipline section:nth-child(4) div>article:last-child, #codeDiscipline section:nth-child(4) div>article:first-child, #codeDiscipline section:nth-child(4) div>article:nth-child(2){
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 2em;
+    place-items: center;
+}
+
+#codeDiscipline section:nth-child(4) div article:first-child>img, #codeDiscipline section:nth-child(4) div article:nth-child(2)>img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+#codeDiscipline section:nth-child(4) div>article:last-child {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    text-align: justify;
+}
+
+#codeDiscipline section:nth-child(4) div article>h2 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#codeDiscipline section:nth-child(4) div article>ul, #codeDiscipline section:nth-child(4) div article>p {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#codeDiscipline section:nth-child(4) div article>img {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+#codeDiscipline section:nth-child(4) h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+
+
+/*//////////////////////////////////*/
+/* Section 5 : tableau des medaille */
+/*//////////////////////////////////*/
+
+#codeDiscipline table {
+    border-radius: 10px;
+    padding: 2%;
+    border-collapse: collapse;
+}
+
+#codeDiscipline table thead {
+    background: linear-gradient(to top right, #8386C2, #3E405C);
+    border: 3px solid #E3D2C1;
+    border-radius: 10px; 
+}
+
+#codeDiscipline section:nth-child(5)>div {
+    background: linear-gradient(to top right, #3E405C, #8386C2);
+    padding: 5%;
+    border-radius: 10px;
+}
+
+#codeDiscipline td {
+    border-bottom: 3px solid #E3D2C1;
+    border-left: none;
+    border-right: none; 
+}
+
+  
+#codeDiscipline tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#codeDiscipline th:nth-child(2)>div, #codeDiscipline th:nth-child(3)>div, #codeDiscipline th:nth-child(4)>div, #codeDiscipline td:nth-child(3)>div, #codeDiscipline td:nth-child(4)>div, #codeDiscipline td:nth-child(5)>div {
+    border-radius: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;  
+}
+
+#codeDiscipline th:nth-child(5) {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#codeDiscipline th:nth-child(5) div {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+#codeDiscipline th:nth-child(5)>div:first-child {
+    background: #D3C481;
+    transform: translateX(-25px) translateY(25px);
+}
+
+#codeDiscipline th:nth-child(5)>div:nth-child(2) {
+    background: #C0C0C0;
+    transform: translateX(25px) translateY(25px);
+}
+
+#codeDiscipline th:nth-child(5)>div:last-child {
+    background: #CD7F32;
+    transform: translateY(-25px);
+}
+
+
+#codeDiscipline th:nth-child(2)>div {
+    background-color: #D3C481; 
+}
+#codeDiscipline th:nth-child(3)>div {
+    background-color: #D9D9D9;
+}
+#codeDiscipline th:nth-child(4)>div {
+    background-color: #CD7F32;
+}
+#codeDiscipline td:nth-child(3)>div, #codeDiscipline td:nth-child(4)>div, #codeDiscipline td:nth-child(5)>div {
+    width: 50px;
+    height: 50px;  
+}
+#codeDiscipline td:nth-child(3)>div {
+    background-color: #D3C481; 
+}
+#codeDiscipline td:nth-child(4)>div {
+    background-color: #D9D9D9;
+}
+#codeDiscipline td:nth-child(5)>div {
+    background-color: #CD7F32;
+}
+
+#codeDiscipline td {
+    text-align: center;
+}
+#codeDiscipline th {
+    width: 20%;
+}
+#codeDiscipline th:first-child, #codeDiscipline td:nth-child(2), #codeDiscipline td:nth-child(6){
+    color: white;
+}
+
+#codeDiscipline section:nth-child(5) table img {
+    border-radius: 10px;
+}
+
+/************************************/
+/* Section 6 : moment fort          */
+/************************************/
+
+#codeDiscipline section:nth-child(6) div>article:first-child, #codeDiscipline section:nth-child(6) div>article:nth-child(2), #codeDiscipline section:nth-child(6) div>article:last-child {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    place-items: center;
+}
+
+#codeDiscipline section:nth-child(6) div article>iframe, #codeDiscipline section:nth-child(6) div article:last-child>img {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+#codeDiscipline section:nth-child(6) div article>p, #codeDiscipline section:nth-child(6) div article>p{
+    grid-column: 3;
+    grid-row: 1;
+    text-align: justify;
+}
+
+#codeDiscipline section:nth-child(6) div article:nth-child(2)>img {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+#codeDiscipline section:nth-child(6) div article:nth-child(2)>p {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: justify;
+}
+
+#codeDiscipline section:nth-child(6) div img, #codeDiscipline section:nth-child(6) div iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/*********************************************************************************************************************************/
+
+/*********************************************************
+Epreuve
+*********************************************************/
+
+#codeEpreuve body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#codeEpreuve header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#codeEpreuve header h1 {
+    background-image: url("images/fond_header.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 6em 0;
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#codeEpreuve main {
+    width: 90%;
+    margin: auto;
+}
+
+#codeEpreuve section{
+    background-color: #E3D2C1;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 20px;
+}
+
+#codeEpreuve article{
+    background-color: #E3D2C1;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5em;
+    margin: 20px;
+}
+#codeEpreuve img{
+    border-radius: 10px;
+}
+
+#codeEpreuve video{
+    width: 97%;
+    height : 100%;
+    margin: 20px;
+}
+
+
+#codeEpreuve aside {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#codeEpreuve aside > div {
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+#codeEpreuveaside > div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #E3D2C1;
+
+}
+
+#codeEpreuve aside > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#codeEpreuve table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#codeEpreuve table th, table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+#codeEpreuve table th {
+    background-color: #333;
+    color: white;
+}
+
+#codeEpreuve aside {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 93%;
+}
+
+#codeEpreuve aside > div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #E3D2C1;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+#codeEpreuve aside > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#codeEpreuve aside > div:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#codeEpreuve main>div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+#codeEpreuve main>div:nth-of-type(2) img:first-of-type {
+    height: 100%;
+    width: 50%;
+}
+
+#codeEpreuve main>div:nth-of-type(2) img:last-of-type {
+    height: 50%;
+}
+
+#codeEpreuve main>div:nth-of-type(2) article {
+    height: 50%;
+}
+
+#codeEpreuve main>section:nth-of-type(4) {
+    background-color: white;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#codeEpreuve main>section:nth-of-type(4) img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+#codeEpreuve main>section:nth-of-type(4) > div {
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+  
+#codeEpreuve main>section:nth-of-type(4) > div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    
+}
+  
+#codeEpreuve main>section:nth-of-type(4) > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #E3D2C1;
+}
+  
+#codeEpreuve main>section:nth-of-type(4) > div:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+#codeEpreuve header input {
+    display: none;
+}
+
+#codeEpreuve header label {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2000;
+}
+
+#codeEpreuve header label span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+#codeEpreuve header nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 25%;
+    background-color: #E3D2C1;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.5s ease;
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+}
+
+#codeEpreuve header div img {
+    width: 10%;
+    margin-left: 90%;
+}
+
+
+#codeEpreuve header p {
+    color: black;
+}
+
+#codeEpreuve header ul:nth-of-type(1)  {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    margin-top: 50px;
+}
+
+#codeEpreuve header ul:nth-of-type(2)  {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    margin-top: 50px;
+}
+
+#codeEpreuve header ul:nth-of-type(1)  li {
+    margin: 20px 0;
+    width: 100%;
+}
+
+#codeEpreuve header ul:nth-of-type(1) li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s;
+}
+
+#codeEpreuve header ul:nth-of-type(1) li a:hover {
+    color: #007BFF;
+}
+
+#codeEpreuve header input:checked ~ nav {
+    left: 0;
+}
+
+#codeEpreuve header input:checked ~ label span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+#codeEpreuve header input:checked ~ label span:nth-child(2) {
+    opacity: 0;
+}
+
+#codeEpreuve header input:checked ~ label span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+#codeEpreuve header ul:nth-of-type(1) li {
+    animation: slide-in 0.5s ease both;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+

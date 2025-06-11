@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Epreuves Du Judo Au JO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f2ee;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .logo {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            width: 60px;
+            height: 60px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            position: relative;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 12px;
+        }
+
+        /* Effet de dégradé sur les bordures */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 12px;
+            padding: 2px;
+            background: linear-gradient(135deg, #7c89c7, #4a5568);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            color: #2d3748;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 25px;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .weight-categories {
+            display: flex;
+            gap: 20px;
+        }
+
+        .category-image {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .team-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .team-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Epreuves Du Judo Au JO</h1>
+        <div class="logo">⬡</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <h2>Catégories Masculines</h2>
+            <ul>
+                <li>60 kg</li>
+                <li>66 kg</li>
+                <li>73 kg</li>
+                <li>81 kg</li>
+                <li>90 kg</li>
+                <li>100 kg</li>
+                <li>+100 kg</li>
+            </ul>
+            <img src="/api/placeholder/200/150" alt="Judoka masculin" class="category-image">
+        </div>
+
+        <div class="card">
+            <h2>Catégories Féminines</h2>
+            <ul>
+                <li>48 kg</li>
+                <li>52 kg</li>
+                <li>57 kg</li>
+                <li>63 kg</li>
+                <li>70 kg</li>
+                <li>78 kg</li>
+                <li>+78 kg</li>
+            </ul>
+            <img src="/api/placeholder/200/150" alt="Judoka féminine" class="category-image">
+        </div>
+
+        <div class="card full-width">
+            <h2>Épreuve par équipes mixtes</h2>
+            <p>En plus des compétitions individuelles, il y a également une épreuve par équipes mixtes, qui consiste en une compétition entre équipes composées de judokas masculins et féminins.</p>
+            <p>Les catégories par équipes mixtes incluent des combattants de diverses catégories de poids, mais les règles précises de sélection des athlètes pour chaque équipe seront définies par les fédérations nationales.</p>
+            <img src="/api/placeholder/800/300" alt="Équipe de judo" class="team-image">
+        </div>
+    </div>
+</body>
+</html>
