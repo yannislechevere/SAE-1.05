@@ -88,5 +88,5 @@ Il est structuré en **cinq parties principales**, chacune correspondant à une 
 
 # ✍️ Auteur
 
-Projet réalisé en quatuor : 
-CHAUVEL Arthur, DELAGE Clément, LE CHEVERE Yannis, LE SECH Marceau
+Projet réalisé en quatuor :  
+**CHAUVEL Arthur**, **DELAGE Clément**, **LE CHEVERE Yannis**, **LE SECH Marceau**
