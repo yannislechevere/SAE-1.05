@@ -3,6 +3,7 @@
 Ce projet est un **site web** destiné à formaliser et présenter le **recueil des besoins** pour un site finalisé.  
 Il est structuré en **cinq parties principales**, chacune correspondant à une étape clé de la conception.
 
+---
 
 # Détails des Parties
 
